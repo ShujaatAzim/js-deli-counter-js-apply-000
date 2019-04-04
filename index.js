@@ -3,12 +3,17 @@ function takeANumber(currentLine, name) {
     return `Welcome, ${name}. You are number ${currentLine.indexOf(name) + 1} in line.`
 }
 
-
+count = 0;
 function nowServing(currentLine) {
+  count++;
+  var line = currentLine;
+  currentLine.push(count);
+  line.push(count);
+  
   if (currentLine.length == 0) {
     return "There is nobody waiting to be served!";
   } else {
-    return `Currently serving ${currentLine.shift()}.`;
+    return `Currently serving ${count}.`;
   }
 }
 
