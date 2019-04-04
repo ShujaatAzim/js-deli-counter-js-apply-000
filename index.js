@@ -9,7 +9,7 @@ function nowServing(currentLine) {
   var line = currentLine;
   currentLine.push(count);
   line.push(count);
-  
+
   if (currentLine.length == 0) {
     return "There is nobody waiting to be served!";
   } else {
